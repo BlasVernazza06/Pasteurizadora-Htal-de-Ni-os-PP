@@ -1,0 +1,1013 @@
+[
+    {
+        "id": "ac8497b3ed9254ac",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bb53762953cccb7d",
+        "type": "mqtt in",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "topic": "HNLP-IAR-TEMP/tolva1/temperatura1",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f9af9cc1940f0cc2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "e44c794a45faddd7",
+                "5aaaaaf63a654bde",
+                "5df6acf0c5e0b14f",
+                "d80ea20549eecebc"
+            ]
+        ]
+    },
+    {
+        "id": "4a5f04d9fe6a27f1",
+        "type": "mqtt in",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "topic": "HNLP-IAR-TEMP/tolva1/temperatura2",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f9af9cc1940f0cc2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "42875e8700cbcaeb",
+                "5df6acf0c5e0b14f",
+                "ac9f007cd9d704fb",
+                "589ebaa00248a6fd"
+            ]
+        ]
+    },
+    {
+        "id": "e44c794a45faddd7",
+        "type": "debug",
+        "z": "ac8497b3ed9254ac",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "42875e8700cbcaeb",
+        "type": "debug",
+        "z": "ac8497b3ed9254ac",
+        "name": "debug 21",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5aaaaaf63a654bde",
+        "type": "ui_gauge",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "group": "6730c1f8d64c0fb0",
+        "order": 8,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Liquido",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "120",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 560,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "589ebaa00248a6fd",
+        "type": "ui_gauge",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "group": "6730c1f8d64c0fb0",
+        "order": 9,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Tapa",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "120",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 550,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5df6acf0c5e0b14f",
+        "type": "ui_chart",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "group": "6730c1f8d64c0fb0",
+        "order": 7,
+        "width": 20,
+        "height": 10,
+        "label": "Temperaturas",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "120",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#ff0000",
+            "#2ca02c",
+            "#6c2ca0",
+            "#121212",
+            "#d5d728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 580,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2410e5ab8fd9564",
+        "type": "mqtt in",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "topic": "HNLP-IAR-TEMP/tolva1/temperatura3",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f9af9cc1940f0cc2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "5df6acf0c5e0b14f",
+                "b10a0c3c2c05bf3c",
+                "db9c3b5ff1f178b0",
+                "0dbe9c0fa2252139"
+            ]
+        ]
+    },
+    {
+        "id": "0dbe9c0fa2252139",
+        "type": "ui_gauge",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "group": "6730c1f8d64c0fb0",
+        "order": 10,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Base Sin Vaina",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "120",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 580,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "9d2232f4a61741c6",
+        "type": "comment",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "info": "",
+        "x": 880,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "5857a35d82b7f993",
+        "type": "debug",
+        "z": "ac8497b3ed9254ac",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "7b723c61614d3080",
+        "type": "function",
+        "z": "ac8497b3ed9254ac",
+        "name": "tomo datos",
+        "func": "var enable = flow.get(\"mensaje\");\nif (msg.payload == true && enable == true) {\n    msg.topic = \"\";\n    var now = new Date();\n    var hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    var mmm = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    var ss = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    var time_stamp = hh + \":\" + mmm + \":\" + ss;\n    var temp_1 = flow.get(\"temp_1\");\n    var temp_2 = flow.get(\"temp_2\");\n    var temp_3 = flow.get(\"temp_3\");\n    var temp_4 = flow.get(\"temp_4\");\n    var vapor = flow.get(\"valvula_vapor\");\n    var agua = flow.get(\"valvula_agua\");\n    msg.payload = {\n        \"time\": time_stamp,\n        \"liquido\": temp_1,\n        \"tapa\": temp_2,\n        \"base_sv\": temp_3,\n        \"base_cv\": temp_4,\n        \"valvula_vapor\": vapor,\n        \"valvula_agua\": agua\n    }\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 780,
+        "wires": [
+            [
+                "5857a35d82b7f993",
+                "18457d4c1f6ec7c1"
+            ]
+        ]
+    },
+    {
+        "id": "18457d4c1f6ec7c1",
+        "type": "function",
+        "z": "ac8497b3ed9254ac",
+        "name": "Filename generator",
+        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n//var hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n//var mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n//var ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\n//msg.fname = \"campana_pet_\" + yyyy + mm + dd + \".csv\";\nmsg.fname = \"tolva1.csv\";\n// Full filename with path for the file node later\nmsg.filename = \"C:\\\\registros_tolvas\\\\\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 780,
+        "wires": [
+            [
+                "f7c6468ed2977732"
+            ]
+        ]
+    },
+    {
+        "id": "f7c6468ed2977732",
+        "type": "fs-file-lister",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "start": "C:\\registros_tolvas",
+        "pattern": "*.*",
+        "folders": "*",
+        "hidden": true,
+        "lstype": "files",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 1280,
+        "y": 780,
+        "wires": [
+            [
+                "ee7d1ca1177d2eb3",
+                "561c4e30a37fe0a7"
+            ]
+        ]
+    },
+    {
+        "id": "ee7d1ca1177d2eb3",
+        "type": "switch",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "property": "$count(msg.payload)",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1470,
+        "y": 780,
+        "wires": [
+            [
+                "67ad10b701247cfb"
+            ],
+            [
+                "1f9c40e90a8a3979"
+            ]
+        ]
+    },
+    {
+        "id": "55cd6d587c20ef83",
+        "type": "csv",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "time,liquido,tapa,base_sv,base_cv,valvula_vapor,valvula_agua",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 1850,
+        "y": 760,
+        "wires": [
+            [
+                "2716dbe6dac13b47"
+            ]
+        ]
+    },
+    {
+        "id": "2716dbe6dac13b47",
+        "type": "file",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 2060,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a4f91e423afcaa6",
+        "type": "csv",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "time,liquido,tapa,base_sv,base_cv,valvula_vapor,valvula_agua",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 1850,
+        "y": 800,
+        "wires": [
+            [
+                "2716dbe6dac13b47"
+            ]
+        ]
+    },
+    {
+        "id": "67ad10b701247cfb",
+        "type": "change",
+        "z": "ac8497b3ed9254ac",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1680,
+        "y": 760,
+        "wires": [
+            [
+                "55cd6d587c20ef83"
+            ]
+        ]
+    },
+    {
+        "id": "1f9c40e90a8a3979",
+        "type": "change",
+        "z": "ac8497b3ed9254ac",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1680,
+        "y": 800,
+        "wires": [
+            [
+                "4a4f91e423afcaa6"
+            ]
+        ]
+    },
+    {
+        "id": "561c4e30a37fe0a7",
+        "type": "debug",
+        "z": "ac8497b3ed9254ac",
+        "name": "debug 27",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1460,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "2adad8e0cabd8e14",
+        "type": "ui_switch",
+        "z": "ac8497b3ed9254ac",
+        "name": "llave",
+        "label": "Logeo",
+        "tooltip": "",
+        "group": "6730c1f8d64c0fb0",
+        "order": 1,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 590,
+        "y": 960,
+        "wires": [
+            [
+                "7162bf6c33f4935a"
+            ]
+        ]
+    },
+    {
+        "id": "7162bf6c33f4935a",
+        "type": "change",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mensaje",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db9c3b5ff1f178b0",
+        "type": "change",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 780,
+        "wires": [
+            [
+                "7b723c61614d3080"
+            ]
+        ]
+    },
+    {
+        "id": "d80ea20549eecebc",
+        "type": "change",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp_1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac9f007cd9d704fb",
+        "type": "change",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp_2",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b10a0c3c2c05bf3c",
+        "type": "change",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp_3",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56efce19ce23c34b",
+        "type": "mqtt in",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "topic": "HNLP-IAR-TEMP/tolva1/temperatura4",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f9af9cc1940f0cc2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 600,
+        "wires": [
+            [
+                "5df6acf0c5e0b14f",
+                "75475c8fb3a12c14",
+                "658e4a14eed4f698",
+                "e52fdc6a42bdc08a"
+            ]
+        ]
+    },
+    {
+        "id": "75475c8fb3a12c14",
+        "type": "change",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp_4",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "658e4a14eed4f698",
+        "type": "debug",
+        "z": "ac8497b3ed9254ac",
+        "name": "debug 28",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "e52fdc6a42bdc08a",
+        "type": "ui_gauge",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "group": "6730c1f8d64c0fb0",
+        "order": 11,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Base Con Vaina",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "120",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 580,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "d44bd5551731dd75",
+        "type": "ui_switch",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "label": "Valvula Vapor",
+        "tooltip": "",
+        "group": "6730c1f8d64c0fb0",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 940,
+        "y": 460,
+        "wires": [
+            [
+                "27fa82159e463d61",
+                "06b4872b51f53a15"
+            ]
+        ]
+    },
+    {
+        "id": "7eeef8c2134675aa",
+        "type": "ui_switch",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "label": "Valvula Agua",
+        "tooltip": "",
+        "group": "6730c1f8d64c0fb0",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 930,
+        "y": 540,
+        "wires": [
+            [
+                "7827462740c1a519"
+            ]
+        ]
+    },
+    {
+        "id": "27fa82159e463d61",
+        "type": "function",
+        "z": "ac8497b3ed9254ac",
+        "name": "function 3",
+        "func": "if(msg.payload == true)\n    flow.set(\"valvula_vapor\", 120);\nelse\n    flow.set(\"valvula_vapor\", 0);\nmsg.payload = flow.get(\"valvula_vapor\");\nmsg.topic = \"valvula_vapor\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06b4872b51f53a15",
+        "type": "debug",
+        "z": "ac8497b3ed9254ac",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7827462740c1a519",
+        "type": "function",
+        "z": "ac8497b3ed9254ac",
+        "name": "function 4",
+        "func": "if(msg.payload == true)\n    flow.set(\"valvula_agua\", 120);\nelse\n    flow.set(\"valvula_agua\", 0);\nmsg.payload = flow.get(\"valvula_agua\");\nmsg.topic = \"valvula_agua\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b4db78a3b2ec79d",
+        "type": "inject",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "valvula_vapor",
+        "payload": "valvula_vapor",
+        "payloadType": "flow",
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "5df6acf0c5e0b14f"
+            ]
+        ]
+    },
+    {
+        "id": "99a330a0a55eb3ee",
+        "type": "inject",
+        "z": "ac8497b3ed9254ac",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "valvula_agua",
+        "payload": "valvula_agua",
+        "payloadType": "flow",
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "5df6acf0c5e0b14f"
+            ]
+        ]
+    },
+    {
+        "id": "d0e9886f402978a2",
+        "type": "ui_spacer",
+        "z": "ac8497b3ed9254ac",
+        "name": "spacer",
+        "group": "6730c1f8d64c0fb0",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bda5f1a893a4c3b6",
+        "type": "ui_spacer",
+        "z": "ac8497b3ed9254ac",
+        "name": "spacer",
+        "group": "6730c1f8d64c0fb0",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "27c4cc6e8b50a26a",
+        "type": "ui_spacer",
+        "z": "ac8497b3ed9254ac",
+        "name": "spacer",
+        "group": "6730c1f8d64c0fb0",
+        "order": 6,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "f9af9cc1940f0cc2",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6730c1f8d64c0fb0",
+        "type": "ui_group",
+        "name": "Tolva 1",
+        "tab": "a74a7daa085f26d6",
+        "order": 1,
+        "disp": true,
+        "width": 20,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a74a7daa085f26d6",
+        "type": "ui_tab",
+        "name": "Pruebas",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]

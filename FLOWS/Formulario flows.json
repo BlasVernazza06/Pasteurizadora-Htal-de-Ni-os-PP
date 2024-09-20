@@ -1,0 +1,401 @@
+[
+    {
+        "id": "724d8f3289839359",
+        "type": "tab",
+        "label": "Flujo 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d3b62ae7a89978f3",
+        "type": "ui_dropdown",
+        "z": "724d8f3289839359",
+        "name": "",
+        "label": "Tipo de Formula",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "83b0976f54c7c733",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "FP - F.PREMATUROS",
+                "value": "FP",
+                "type": "str"
+            },
+            {
+                "label": "FPL - F.PREMATURO LIQUIDA",
+                "value": "FPL",
+                "type": "str"
+            },
+            {
+                "label": "FI - F.INICIO (N1)",
+                "value": "FI",
+                "type": "str"
+            },
+            {
+                "label": "FIL - F.INICIO LIQUIDA",
+                "value": "FIL",
+                "type": "str"
+            },
+            {
+                "label": "FC - F.DE CONTINUACION",
+                "value": "FC",
+                "type": "str"
+            },
+            {
+                "label": "FD - F.DESLACTOSADA",
+                "value": "FD",
+                "type": "str"
+            },
+            {
+                "label": "FH - F.HIDROLIZADA PARCIALMENTE",
+                "value": "FH",
+                "type": "str"
+            },
+            {
+                "label": "FHE - F.HIDROLIZADA EXTENSAMENTE",
+                "value": "FHE",
+                "type": "str"
+            },
+            {
+                "label": "FAA - FÒRMULA AA LIBRES",
+                "value": "FAA",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "formula",
+        "topicType": "msg",
+        "className": "",
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "38025be36f7ef48d"
+            ]
+        ]
+    },
+    {
+        "id": "e2e5a30106e053bc",
+        "type": "ui_dropdown",
+        "z": "724d8f3289839359",
+        "name": "",
+        "label": "Porcentaje de Dilucion",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "83b0976f54c7c733",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "13%",
+                "value": "13",
+                "type": "str"
+            },
+            {
+                "label": "14%",
+                "value": "14",
+                "type": "str"
+            },
+            {
+                "label": "17%",
+                "value": "17",
+                "type": "str"
+            },
+            {
+                "label": "18%",
+                "value": "18",
+                "type": "str"
+            },
+            {
+                "label": "20%",
+                "value": "20",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "P.Dilucion",
+        "topicType": "msg",
+        "className": "",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "38025be36f7ef48d"
+            ]
+        ]
+    },
+    {
+        "id": "8b7e1755f3431bcb",
+        "type": "ui_text_input",
+        "z": "724d8f3289839359",
+        "name": "",
+        "label": "Volumen",
+        "tooltip": "",
+        "group": "83b0976f54c7c733",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "Volumen",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "38025be36f7ef48d"
+            ]
+        ]
+    },
+    {
+        "id": "9cb561c8a8e87fb8",
+        "type": "comment",
+        "z": "724d8f3289839359",
+        "name": "",
+        "info": "{\n    \"group\":{\n        \"hide\":[\n            \"Home_Formulario\"\n        ],\n        \"show\":[\n            \"Home_View\"\n        ]\n    }\n}",
+        "x": 400,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "cd1d5b53576af212",
+        "type": "ui_text_input",
+        "z": "724d8f3289839359",
+        "name": "",
+        "label": "Nombre",
+        "tooltip": "",
+        "group": "83b0976f54c7c733",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "nombre",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "38025be36f7ef48d"
+            ]
+        ]
+    },
+    {
+        "id": "b912b46316231f8d",
+        "type": "ui_button",
+        "z": "724d8f3289839359",
+        "name": "",
+        "group": "83b0976f54c7c733",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Ingresar a Control",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"group\":{\"hide\":[\"home_Formulario\"],\"show\":[\"home_Tolva1\",\"home_Maquina\",\"home_Tolva2\"]}}",
+        "payloadType": "json",
+        "topic": "form",
+        "topicType": "flow",
+        "x": 850,
+        "y": 660,
+        "wires": [
+            [
+                "3edea0b59a3e2c98"
+            ]
+        ]
+    },
+    {
+        "id": "3edea0b59a3e2c98",
+        "type": "ui_ui_control",
+        "z": "724d8f3289839359",
+        "name": "",
+        "events": "all",
+        "x": 1080,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f0f2bc0aca10ecd",
+        "type": "ui_button",
+        "z": "724d8f3289839359",
+        "name": "",
+        "group": "1de0dea5a39ac249",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Volver",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"group\":{\"show\":[\"home_Formulario\"],\"hide\":[\"home_Tolva1\",\"home_Maquina\",\"home_Tolva2\"]}}",
+        "payloadType": "json",
+        "topic": "form",
+        "topicType": "flow",
+        "x": 830,
+        "y": 740,
+        "wires": [
+            [
+                "3edea0b59a3e2c98"
+            ]
+        ]
+    },
+    {
+        "id": "58849069edbf53c9",
+        "type": "ui_text_input",
+        "z": "724d8f3289839359",
+        "name": "Input Text",
+        "label": "Enter Data",
+        "tooltip": "",
+        "group": "83b0976f54c7c733",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 440,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "38025be36f7ef48d",
+        "type": "function",
+        "z": "724d8f3289839359",
+        "name": "Store Input Value",
+        "func": "// Obtener los valores del mensaje y almacenarlos en el contexto de flujo\nflow.set('nombre_value', msg.payload.nombre);\nflow.set('tipoFormula_value', msg.payload.tipoFormula);\nflow.set('PorDilucion_value', msg.payload.porDisolucion);\nflow.set('Volumen_value', msg.payload.volumen);\n\n// Recuperar los valores del contexto de flujo\nconst nombre = flow.get('nombre_value');\nconst tipoFormula = flow.get('tipoFormula_value');\nconst porDisolucion = flow.get('PorDilucion_value');\nconst volumen = flow.get('Volumen_value');\n\n// Crear el objeto JSON con los valores obtenidos\nconst registro = {\n    nombre,\n    tipoFormula,\n    porDisolucion,\n    volumen\n};\n\n// Enviar el objeto JSON como el payload del mensaje\nmsg.payload = registro;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05ef522ac07324cd",
+        "type": "ui_button",
+        "z": "724d8f3289839359",
+        "name": "Send Data",
+        "group": "83b0976f54c7c733",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Enviar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "",
+        "topicType": "str",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "9c91c5899ba5669d"
+            ]
+        ]
+    },
+    {
+        "id": "9c91c5899ba5669d",
+        "type": "function",
+        "z": "724d8f3289839359",
+        "name": "Transform to JSON",
+        "func": "// Obtener el valor del input desde el contexto de flujo\nvar input_value = flow.get('input_value');\n\n// Comprobar si el valor es undefined\nif (input_value === undefined) {\n    // Si es undefined, proporcionar un valor por defecto o manejar el error\n    input_value = 'No data';\n}\n\n// Crear un objeto JSON con el valor del input\nvar json_output = {\n  \"input\": input_value\n};\n\n// Enviar el objeto JSON como el payload del mensaje\nmsg.payload = json_output;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "127bbcb9cbd82e8a"
+            ]
+        ]
+    },
+    {
+        "id": "127bbcb9cbd82e8a",
+        "type": "debug",
+        "z": "724d8f3289839359",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 790,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "83b0976f54c7c733",
+        "type": "ui_group",
+        "name": "Formulario",
+        "tab": "2ecc6fe144d26369",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1de0dea5a39ac249",
+        "type": "ui_group",
+        "name": "Maquina",
+        "tab": "2ecc6fe144d26369",
+        "order": 3,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2ecc6fe144d26369",
+        "type": "ui_tab",
+        "name": "home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
